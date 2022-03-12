@@ -1,11 +1,12 @@
 <template>
   <div class="posts">
     <NavBar></NavBar>
-      <div class="background album py-5">
+    <SecondNavBar></SecondNavBar>
+      <div class="background album py-5" style="padding-bottom:250px!important">
           <div class="container">
             <div class="row">
-              <div v-for="posts in APIData" :key="posts.id" class="col-md-4">
-                <div class="mb-1 box-shadow">
+              <div v-for="posts in APIData" :key="posts.id" class="col-md-12">
+                <div class="mb-4 box-shadow">
                   <div class="card-body">
                       <h4 class="title"><a class="" href="https://www.globo.com/">{{posts.title}}</a></h4>
                       <span class="card-text">{{posts.content}}</span>
@@ -20,11 +21,14 @@
             </div>
           </div>
       </div>
+      <Footer></Footer>
   </div>
 </template>
 
 <script>
   import NavBar from '../components/Navbar.vue'
+  import Footer from '../components/Footer.vue'
+  import SecondNavBar from '../components/SecondNavbar.vue'
   import { getAPI } from '../axios-api'
   import { mapState } from 'vuex'
   export default {
@@ -37,6 +41,8 @@
     },
     components: {
       NavBar,
+      SecondNavBar,
+      Footer,
     },
     computed: mapState(['APIData']),
     created () {
@@ -84,5 +90,8 @@ span{
     background: rgb(102, 23, 155);  
 }
 
+.background{
+  padding-bottom: 200px!important;
+}
 
 </style>
