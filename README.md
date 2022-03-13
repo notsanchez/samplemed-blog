@@ -3,7 +3,7 @@
 ![login screen](https://i.imgur.com/1gpCO35_d.webp?maxwidth=1920&fidelity=grand)
 ![blog page](https://i.imgur.com/mhklYXQ_d.webp?maxwidth=1920&fidelity=grand)
 
-The website is a blog landing page that makes API requests to render posts, with a JWT authentication in the API and a login screen. At the top there is a header with the [Samplemed](https://www.samplemed.com.br/) logo and a button to log out.
+The website is a blog landing page that makes API requests to render posts, with a JWT authentication in the API and a login screen. At the top have a header with the [Samplemed](https://www.samplemed.com.br/) logo and a button to log out.
 
 ### Login System
 The login screen does JWT authentication to API built in Django.
